@@ -4,6 +4,6 @@
 
 @layer components {
   .infoText {
-    @apply p-3 text-center bg-[#3E3F4B] transition rounded-lg max-w-[300px] cursor-pointer hover:bg-gray-900;
+    @apply p-4 text-center text-sm  bg-[#3E3F4B] transition rounded-lg max-w-[300px] cursor-pointer hover:bg-gray-900;
   }
 }
