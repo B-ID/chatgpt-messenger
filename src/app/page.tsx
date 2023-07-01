@@ -20,12 +20,16 @@ const Home: NextPage = () => {
 
           <div className="space-y-3.5">
             <p className="infoText">
-              "Explain quantum computing in simple terms"→
+              &quot; Explain quantum computing in simple terms → &quot;
             </p>
             <p className="infoText">
-              "Got any creative ideas for a 10 year old's birthday?"→
+              &quot; Got any creative ideas for a 10 year old&apos;s birthday? →
+              &quot;
             </p>
-            <p className="infoText">"What is the color of the sun?"→</p>
+            <p className="infoText">
+              {" "}
+              &quot; What is the color of the sun? → &quot;
+            </p>
           </div>
         </div>
 
@@ -38,11 +42,11 @@ const Home: NextPage = () => {
           </div>
 
           <div className="space-y-3.5">
-            <p className="infoText">"Explain Something to me"</p>
+            <p className="infoText">Remembers what user said earlier in the conversation</p>
             <p className="infoText">
-              "What is the difference between a dog and a cat?"
+              Allows user to provide follow-up corrections
             </p>
-            <p className="infoText">"What is the color of the sun?"</p>
+            <p className="infoText">Trained to decline inappropriate requests</p>
           </div>
         </div>
 
@@ -55,11 +59,11 @@ const Home: NextPage = () => {
           </div>
 
           <div className="space-y-3.5">
-            <p className="infoText">"Explain Something to me"</p>
+            <p className="infoText">May occasionally generate incorrect information</p>
             <p className="infoText">
-              "What is the difference between a dog and a cat?"
+              May occasionally produce harmful instructions or biased content
             </p>
-            <p className="infoText">"What is the color of the sun?"</p>
+            <p className="infoText">Limited knowledge of world and events after 2021</p>
           </div>
         </div>
       </div>
