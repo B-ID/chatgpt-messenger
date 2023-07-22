@@ -3,7 +3,14 @@
 @tailwind utilities;
 
 @layer components {
-  .infoText {
-    @apply p-4 text-center text-sm  bg-[#3E3F4B] transition rounded-lg max-w-[300px] cursor-pointer hover:bg-gray-900;
+  .info-text {
+    @apply p-4 text-center text-sm md:text-base  bg-[#3E3F4B] transition rounded-lg max-w-[300px] cursor-pointer hover:bg-gray-900;
+  }
+
+  .chat-row {
+    @apply rounded-lg px-5 py-5 text-sm flex items-center justify-center
+    space-x-2 hover:bg-gray-700/70 cursor-pointer text-gray-300 transition-all
+    duration-200 ease-out
+
   }
 }
