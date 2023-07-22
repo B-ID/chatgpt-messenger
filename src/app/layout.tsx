@@ -32,7 +32,7 @@ export default async function RootLayout({
                 <SideBar />
               </div>
 
-              <div className="flex-1 h-screen overflow-auto bg-gpt">
+              <div className="flex-1 h-screen overflow-auto scrollbar-hide bg-gpt">
                 <Header />
                 {children}
               </div>

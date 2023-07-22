@@ -13,7 +13,7 @@ import Header from "@/components/header";
 const Home: NextPage = () => {
   const { mobileMenu, closeMenu, openMenu } = useSidebar();
   return (
-    <main className="relative flex flex-col items-center h-screen px-2 py-4 overflow-y-scroll text-white lg:justify-center align-center md:px-4">
+    <main className="relative flex flex-col items-center h-screen px-2 py-4 text-white lg:justify-center align-center md:px-4">
       <h1 className="mb-20 text-5xl font-bold ">ChatGPT</h1>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {/* Examples */}
