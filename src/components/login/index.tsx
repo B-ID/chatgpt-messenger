@@ -11,7 +11,7 @@ const Login: FC<Props> = (props) => {
     <div>
       Login
       <div>
-        <Image src={logo} alt="logo" fill />
+        {/* <Image src={logo} alt="logo" fill /> */}
       </div>
     </div>
   );

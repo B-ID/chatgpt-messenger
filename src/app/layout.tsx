@@ -3,7 +3,9 @@ import "./globals.css";
 import SessionProvider from "@/components/session-provider";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
+import MenuProvider from "@/contexts/sidebar-context";
 import Login from "@/components/login";
+import Header from "@/components/header";
 
 export const metadata = {
   title: "ChatGPT Messenger",
@@ -17,20 +19,25 @@ export default async function RootLayout({
 }) {
   const session = await getServerSession(authOptions);
 
-  if (!session) return <Login />;
+  // if (!session) return <Login />;
 
   return (
     <html lang="en">
       <body>
         <SessionProvider session={session}>
-          <div className="flex">
-            {/* Sidebar */}
-            <div className="h-screen max-w-xs overflow-y-scroll md:min-w-[20rem]">
-              <SideBar />
-            </div>
+          <MenuProvider>
+            <div className="flex">
+              {/* Sidebar */}
+              <div className="z-40 bg-gpt">
+                <SideBar />
+              </div>
 
-            <div className="flex-1 bg-gpt">{children}</div>
-          </div>
+              <div className="flex-1 h-screen overflow-auto bg-gpt">
+                <Header />
+                {children}
+              </div>
+            </div>
+          </MenuProvider>
         </SessionProvider>
       </body>
     </html>

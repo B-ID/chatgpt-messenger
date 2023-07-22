@@ -1,13 +1,19 @@
+"use client";
+
 import { NextPage } from "next";
 import {
   BoltIcon,
   ExclamationTriangleIcon,
   SunIcon,
 } from "@heroicons/react/24/outline";
+import { Bars3Icon, XCircleIcon } from "@heroicons/react/24/solid";
+import { useSidebar } from "@/contexts/sidebar-context";
+import Header from "@/components/header";
 
 const Home: NextPage = () => {
+  const { mobileMenu, closeMenu, openMenu } = useSidebar();
   return (
-    <main className="flex flex-col items-center justify-center h-screen px-2 py-4 overflow-y-scroll text-white md:px-4 ">
+    <main className="relative flex flex-col items-center h-screen px-2 py-4 overflow-y-scroll text-white lg:justify-center align-center md:px-4">
       <h1 className="mb-20 text-5xl font-bold ">ChatGPT</h1>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {/* Examples */}
@@ -42,11 +48,15 @@ const Home: NextPage = () => {
           </div>
 
           <div className="space-y-3.5">
-            <p className="info-text">Remembers what user said earlier in the conversation</p>
+            <p className="info-text">
+              Remembers what user said earlier in the conversation
+            </p>
             <p className="info-text">
               Allows user to provide follow-up corrections
             </p>
-            <p className="info-text">Trained to decline inappropriate requests</p>
+            <p className="info-text">
+              Trained to decline inappropriate requests
+            </p>
           </div>
         </div>
 
@@ -59,11 +69,15 @@ const Home: NextPage = () => {
           </div>
 
           <div className="space-y-3.5">
-            <p className="info-text">May occasionally generate incorrect information</p>
+            <p className="info-text">
+              May occasionally generate incorrect information
+            </p>
             <p className="info-text">
               May occasionally produce harmful instructions or biased content
             </p>
-            <p className="info-text">Limited knowledge of world and events after 2021</p>
+            <p className="info-text">
+              Limited knowledge of world and events after 2021
+            </p>
           </div>
         </div>
       </div>
